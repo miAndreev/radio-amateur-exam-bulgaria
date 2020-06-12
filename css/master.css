@@ -77,7 +77,7 @@ ol li { list-style-type: decimal; margin-left: 20px; }
 
 /* clearfix */
 .quizArea, .quizResults {
-    zoom: 1;
+	transform: scale(1);
 }
 .quizArea:before, .quizArea:after, .quizResults:before, .quizResults:after {
     content: "\0020";
