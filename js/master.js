@@ -1,5 +1,20 @@
 // Put all your page JS here
 
+var options = {
+	checkAnswerText:  'Провери отговора',
+	nextQuestionText: 'Нататък &raquo;',
+	backButtonText: '',
+	randomSortQuestions: true,
+	randomSortAnswers: true,
+	reventUnanswered: true,
+	completionResponseMessaging: true,
+	perQuestionResponseMessaging: false,
+	completionResponseMessaging: true,
+	questionCountText: 'Въпрос %current от %total',
+	preventUnanswered: true,
+	preventUnansweredText: 'Изберете поне един отговор!',
+}
+
 var quizJSON = {
     "info": {
         "name":    "Подготовка за изпит<br>Радиолюбител клас " + razdel_number,
@@ -28,5 +43,5 @@ $.fn.shuffle = function() {
 quizJSON.questions = $(razdel).shuffle().slice(0,60).get();
 
 $(function () {
-    $('#slickQuiz').slickQuiz();
+    $('#slickQuiz').slickQuiz(options);
 });
